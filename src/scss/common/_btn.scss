@@ -1,0 +1,68 @@
+.btn {
+  padding: 1.4rem 2rem;
+  display: flex;
+  border-radius: 0.8rem;
+  border: none;
+  .space {
+    display: inline;
+    padding: 0 0.5rem;
+  }
+  span {
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: white;
+  }
+}
+//with + and text
+.purple_add_and_text {
+  background: #7f56d9;
+  transition: all 0.5s;
+  span {
+    color: white;
+  }
+  &:hover {
+    background: #6941c6;
+  }
+}
+.purple_text {
+  background: #7f56d9;
+  transition: all 0.5s;
+  span {
+    color: white;
+  }
+  &:hover {
+    background: #6941c6;
+  }
+}
+.white_add_and_text {
+  background: #f9fafb;
+  border: 1px solid #d0d5dd;
+  span,
+  path {
+    color: black;
+    transition: all 0.5s;
+    fill: black;
+  }
+
+  &:hover {
+    span {
+      color: #7f56d9;
+    }
+    path {
+      fill: #7f56d9;
+    }
+  }
+}
+.white_text {
+  background: #f9fafb;
+  border: 1px solid #d0d5dd;
+  span {
+    color: black;
+    transition: all 0.5s;
+  }
+  &:hover {
+    span {
+      color: #7f56d9;
+    }
+  }
+}

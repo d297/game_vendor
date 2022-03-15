@@ -1,0 +1,24 @@
+$bgMain: #f9fafb;
+
+%linkStyle {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+%btnStyle {
+  background-color: #7f56d9;
+  color: #ffffff;
+}
+
+%flexSP {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+%flexAIC {
+  display: flex;
+  align-items: center;
+}
+
+%cursorPointer {
+  cursor: pointer;
+}

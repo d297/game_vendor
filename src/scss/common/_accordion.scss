@@ -1,0 +1,135 @@
+.accordion button {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: #101828;
+}
+.accordion ul {
+  margin-left: 1.8rem;
+  list-style-type: disc;
+  color: #7f56d9;
+  & span {
+    color: #667085;
+  }
+}
+.accordion h2 {
+  color: #101828;
+  margin: 0;
+  padding: 8px 0;
+}
+.accordion h3 {
+  color: #101828;
+  margin: 3rem 0 1.6rem;
+}
+.divider {
+  border: 2px solid red;
+}
+
+.accordion-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  background-color: #f9fafb;
+  border: 0;
+  border-radius: 0;
+  overflow-anchor: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    border-radius 0.15s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .accordion-button {
+    transition: none;
+  }
+}
+.accordion-button:not(.collapsed) {
+  background-color: #f9fafb;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 118' fill='%230c63e4'%3e%3cpath fill-rule='evenodd' d='M9.8 5.8C9.8 5.35817 9.44183 5 9 5C8.55817 5 8.2 5.35817 8.2 5.8H9.8ZM8.2 12.2C8.2 12.6418 8.55817 13 9 13C9.44183 13 9.8 12.6418 9.8 12.2H8.2ZM5.8 8.2C5.35817 8.2 5 8.55817 5 9C5 9.44183 5.35817 9.8 5.8 9.8V8.2ZM12.2 9.8C12.6418 9.8 13 9.44183 13 9C13 8.55817 12.6418 8.2 12.2 8.2V9.8ZM16.2 9C16.2 12.9765 12.9765 16.2 9 16.2V17.8C13.8601 17.8 17.8 13.8601 17.8 9H16.2ZM9 16.2C5.02355 16.2 1.8 12.9765 1.8 9H0.2C0.2 13.8601 4.13989 17.8 9 17.8V16.2ZM1.8 9C1.8 5.02355 5.02355 1.8 9 1.8V0.2C4.13989 0.2 0.2 4.13989 0.2 9H1.8ZM9 1.8C12.9765 1.8 16.2 5.02355 16.2 9H17.8C17.8 4.13989 13.8601 0.2 9 0.2V1.8ZM8.2 5.8V12.2H9.8V5.8H8.2ZM5.8 9.8H12.2V8.2H5.8V9.8Z'/%3e%3c/svg%3e");
+  transform: rotate(-180deg);
+}
+.accordion-button::after {
+  flex-shrink: 0;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-left: auto;
+  content: "";
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 118' fill='%230c63e4'%3e%3cpath fill-rule='evenodd' d='M5.8 8.2C5.35817 8.2 5 8.55817 5 9C5 9.44183 5.35817 9.8 5.8 9.8V8.2ZM12.2 9.8C12.6418 9.8 13 9.44183 13 9C13 8.55817 12.6418 8.2 12.2 8.2V9.8ZM16.2 9C16.2 12.9764 12.9764 16.2 9 16.2V17.8C13.8601 17.8 17.8 13.8601 17.8 9H16.2ZM9 16.2C5.02355 16.2 1.8 12.9764 1.8 9H0.2C0.2 13.8601 4.13989 17.8 9 17.8V16.2ZM1.8 9C1.8 5.02355 5.02355 1.8 9 1.8V0.2C4.13989 0.2 0.2 4.13989 0.2 9H1.8ZM9 1.8C12.9764 1.8 16.2 5.02355 16.2 9H17.8C17.8 4.13989 13.8601 0.2 9 0.2V1.8ZM5.8 9.8H12.2V8.2H5.8V9.8Z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: 1.8rem;
+  transition: transform 0.2s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .accordion-button::after {
+    transition: none;
+  }
+}
+.accordion-button:hover {
+  z-index: 2;
+}
+.accordion-button:focus {
+  z-index: 3;
+  outline: 0;
+}
+.accordion-header {
+  margin-bottom: 0;
+}
+.accordion-item {
+  background-color: #f9fafb;
+}
+.accordion-item:first-of-type {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.accordion-item:first-of-type .accordion-button {
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
+.accordion-item:not(:first-of-type) {
+  border-top: 0;
+}
+.accordion-item:last-of-type {
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+.accordion-item:last-of-type .accordion-button.collapsed {
+  border-bottom-right-radius: calc(0.25rem - 1px);
+  border-bottom-left-radius: calc(0.25rem - 1px);
+}
+.accordion-item:last-of-type .accordion-collapse {
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+.accordion-body {
+  padding: 1rem 0 3rem;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #667085;
+}
+.accordion-flush .accordion-collapse {
+  border-width: 0;
+}
+.accordion-flush .accordion-item {
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+}
+.accordion-flush .accordion-item:first-child {
+  border-top: 0;
+}
+.accordion-flush .accordion-item:last-child {
+  border-bottom: 0;
+}
+.accordion-flush .accordion-item .accordion-button {
+  border-radius: 0;
+}
+.collapse:not(.show) {
+  display: none;
+}

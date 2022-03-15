@@ -1,0 +1,5 @@
+@mixin respondTo($_minWidth, $_maxWidth) {
+  @media (min-width: $_minWidth) and (max-width: $_maxWidth) {
+    @content;
+  }
+}

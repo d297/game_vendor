@@ -1,0 +1,437 @@
+.main {
+  background-color: $bgMain;
+  .wrapper {
+  }
+  &__path {
+    width: 21rem;
+    padding: 4rem 0;
+    @extend %flexSP;
+    @include respondTo(768px, 1024px) {
+      padding: 3.2rem 0 2rem;
+    }
+    @include respondTo(300px, 767px) {
+      padding: 2rem 0 2rem;
+    }
+  }
+
+  &__promo {
+    h1 {
+      font-weight: 600;
+      font-size: 5.2rem;
+      margin-bottom: 4rem;
+      @include respondTo(768px, 1024px) {
+        margin-bottom: 3.2rem;
+      }
+      @include respondTo(300px, 767px) {
+        font-size: 2.8rem;
+        line-height: 3.2rem;
+        margin-bottom: 2rem;
+      }
+    }
+    &__content {
+      box-sizing: border-box;
+      overflow: hidden;
+      height: 408px;
+      background: url(../img/bg.jpeg) center center / cover no-repeat;
+      border-radius: 16px;
+      padding: 7.2rem;
+      color: #ffffff;
+      position: relative;
+      margin-bottom: 4rem;
+      @include respondTo(1024px, 1280px) {
+        padding: 6rem;
+      }
+      @include respondTo(769px, 1023px) {
+        padding: 4rem;
+        height: 324px;
+        background: url(../img/bg.jpeg) left center / cover no-repeat;
+      }
+      @include respondTo(320px, 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding: 3.2rem;
+        height: 448px;
+        background: url(../img/bg_mobile.jpg) center center / cover no-repeat;
+      }
+
+      img {
+        height: 448px;
+        position: absolute;
+        bottom: 0;
+        right: 8%;
+        @include respondTo(1024px, 1188px) {
+          height: 384px;
+          right: 2%;
+        }
+        @include respondTo(982px, 1023px) {
+          height: 320px;
+          right: 2%;
+        }
+        @include respondTo(889px, 981px) {
+          height: 320px;
+          right: 2%;
+        }
+        @include respondTo(768px, 888px) {
+          height: 305px;
+          right: -9%;
+        }
+        @include respondTo(320px, 767px) {
+          height: 210px;
+          right: calc(50% - 170px);
+        }
+      }
+    }
+    &-header {
+      font-weight: 600;
+      font-size: 4rem;
+      line-height: 4.4rem;
+      margin-bottom: 2.8rem;
+      @include respondTo(768px, 981px) {
+        font-size: 3.2rem;
+        line-height: 3.8rem;
+      }
+      @include respondTo(320px, 767px) {
+        width: 207px;
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+        margin-bottom: 1.6rem;
+        padding-left: 30px;
+        br {
+          display: none;
+        }
+      }
+    }
+    &-descr {
+      max-width: 31.2rem;
+      font-weight: normal;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      margin-bottom: 3.2rem;
+      @include respondTo(320px, 767px) {
+        width: 208px;
+        padding-left: 30px;
+      }
+    }
+    &-btn {
+      @include respondTo(320px, 767px) {
+        position: absolute;
+        bottom: 32px;
+        right: calc(50% - 104px);
+        z-index: 3;
+        width: 183px;
+        justify-content: center;
+      }
+    }
+  }
+  &__list {
+    margin-bottom: 2rem;
+    &__parameters {
+      @extend %flexSP;
+      align-items: start;
+      margin-bottom: 3.2rem;
+      @include respondTo(100px, 767px) {
+        width: 100%; //
+
+        flex-direction: column;
+      }
+      .filters {
+        overflow: hidden;
+
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: all 0.5s;
+        @include respondTo(100px, 767px) {
+          margin-top: 0 1.8rem;
+        }
+        & > div {
+        }
+        &.active {
+          .category {
+            display: block;
+            position: relative;
+          }
+          .sort_by {
+            display: block;
+          }
+        }
+        &__panel {
+          display: none;
+
+          @include respondTo(100px, 767px) {
+            background: #ffffff;
+            display: inline-block;
+            padding: 1.1rem 0;
+            text-align: center;
+            width: 99.6%;
+            span::before {
+              content: "";
+              display: inline-block;
+
+              width: 40px;
+              height: 14px;
+              background: url(../icons/main/filters.svg) center center / 40%
+                no-repeat;
+            }
+          }
+        }
+        .category {
+          width: 48%;
+          @include respondTo(100px, 767px) {
+            display: none;
+            width: 99.7%;
+          }
+        }
+        @include respondTo(100px, 767px) {
+          width: 100%; //
+          flex-direction: column;
+        }
+      }
+      & > div:not(:first-child) {
+        margin-left: 20px;
+        @include respondTo(100px, 767px) {
+          margin-left: 0;
+        }
+      }
+      .parameter__title {
+        display: block;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        padding-bottom: 0.4rem;
+        color: #667085da;
+        margin-top: -0.1rem;
+      }
+      & > .search #search {
+        position: relative;
+        padding: 1rem 5rem;
+        border: 1px solid #d0d5dd;
+        box-sizing: border-box;
+        border-radius: 0.8rem;
+        transition: all 0.5s;
+        margin-bottom: 1.8rem;
+        &:hover {
+          border: 1px solid #98a2b3;
+        }
+      }
+    }
+    &-category {
+      display: flex;
+      width: 100%;
+    }
+  }
+
+  &__games {
+    display: flex;
+    flex-wrap: wrap;
+    //justify-content: space-between;
+    justify-content: flex-start;
+    .add__card {
+      border: 1px dashed #7b61ff;
+      box-sizing: border-box;
+      border-radius: 1.2rem;
+      padding: 2rem 4rem 4rem;
+      font-size: 1.4rem;
+      line-height: 2rem;
+      @extend %flexAIC;
+      flex-direction: column;
+      justify-content: center;
+
+      /* or 143% */
+      text-align: center;
+
+      /* Content/400 */
+      color: #98a2b3;
+      p {
+        margin: 0;
+        margin-bottom: 2rem;
+      }
+      .btn {
+        width: 100%;
+        @extend %flexAIC;
+        justify-content: center;
+      }
+    }
+  }
+  &__game {
+    @include respondTo(769px, 1024px) {
+      flex-shrink: 1;
+      margin: 0 0.6%;
+      margin-bottom: 3.2rem;
+      max-width: 32.1%;
+    }
+    @include respondTo(521px, 768px) {
+      flex-shrink: 1;
+      margin: 0 1%;
+      margin-bottom: 3.2rem;
+      min-width: 48%;
+    }
+    @include respondTo(0px, 520px) {
+      flex-shrink: 1;
+      margin: 0 1%;
+      margin-bottom: 3.2rem;
+      min-width: 100%;
+    }
+    margin: 0 0.5%;
+    flex-shrink: 1;
+    //    flex-basis: 1;
+    //    max-width: 271px;
+    max-width: 24%;
+    min-height: 451px;
+    margin-bottom: 3.2rem;
+    border-radius: 1.2rem;
+    transition: box-shadow 0.5s;
+    overflow: hidden;
+    &:hover {
+      box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.06),
+        0px 12px 12px -4px rgba(16, 24, 40, 0.02);
+    }
+    &:hover .close {
+      right: 1.2rem;
+      top: 1.2rem;
+    }
+    &-info {
+      background: #ffffff;
+      padding: 1.2rem;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &-img {
+      width: 100%;
+      margin-bottom: 2rem;
+      position: relative;
+      img {
+        width: 100%;
+      }
+      & > .close {
+        position: absolute;
+        right: -10rem;
+        top: -10rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #d92d20;
+        border-radius: 0.8rem;
+        width: 4.4rem;
+        height: 4.4rem;
+        transition: background-color 0.5s;
+        &:hover {
+          background: #b32318;
+        }
+        img {
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+    }
+    &-about {
+      padding: 0 1.2rem 0.8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &__title {
+        margin: 1.2rem 0 1.5rem;
+        font-weight: 600;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        color: #101828;
+      }
+      &__description {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        color: #98a2b3;
+      }
+      .evaluation {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.2rem;
+        &__stars {
+        }
+        &__count {
+          font-size: 1.2rem;
+          padding: 0 0.8rem;
+          color: #475467;
+        }
+      }
+    }
+    .price {
+      position: relative;
+      padding: 0 1.2rem 0.8rem;
+      height: 4.1rem;
+      .divider {
+        display: block;
+        margin-bottom: 1.6rem;
+      }
+      &__conteiner {
+        display: flex;
+        justify-content: space-between;
+      }
+      &__views {
+        font-size: 16px;
+        line-height: 24px;
+        display: flex;
+        &_old {
+          color: #d0d5dd;
+          text-decoration: line-through;
+          padding-right: 0.8rem;
+        }
+        &_act {
+          font-weight: 600;
+        }
+      }
+
+      &__discount {
+      }
+    }
+  }
+  &__pagination {
+    border-radius: 0.8rem;
+    background: #ffffff;
+    margin: 0 auto;
+    padding: 0.8rem 0;
+    @include respondTo(320px, 767px) {
+      border: 1px solid #d0d5dd;
+    }
+
+    &__panel {
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      height: 4.4rem;
+      text-align: center;
+      @include respondTo(100px, 767px) {
+        display: block;
+      }
+      span {
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 4.4rem;
+        color: #101828;
+      }
+    }
+  }
+  & .questions {
+    padding: 8rem 0 8rem 0;
+    &__title {
+      margin: 0 0 2rem 0;
+      font-weight: 600;
+      font-size: 3.2rem;
+      line-height: 3.8rem;
+      text-align: center;
+      color: #101828;
+    }
+    &__subtitle {
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      text-align: center;
+      color: #667085;
+      margin-bottom: 2rem;
+    }
+  }
+}

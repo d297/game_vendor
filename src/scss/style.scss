@@ -1,0 +1,60 @@
+@import "./common/normalize.scss";
+@import "./common/variables";
+@import "./common/badge";
+@import "./common/mixin";
+@import "./common/input";
+@import "./common/btn";
+@import "./common/pagination";
+@import "./common/accordion";
+
+@import "./sections/header";
+
+@import "./sections/main";
+
+@import "./sections/footer";
+@import "./sections/menu-mobile";
+
+html {
+  font-size: 10px;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #ffffff;
+  position: relative;
+}
+.wrapper {
+  max-width: 1221px;
+  margin: 0 auto;
+  @include respondTo(769px, 1250px) {
+    padding: 0 25px;
+  }
+  @include respondTo(320px, 768px) {
+    padding: 0 24px;
+    overflow: hidden;
+  }
+}
+.divider {
+  border: 0;
+  border-bottom: 1px solid #eaecf0;
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+.link {
+  @extend %linkStyle;
+
+  color: #667085;
+  &_current {
+    @extend %linkStyle;
+    color: #d0d5dd;
+  }
+}
+.newLine {
+  display: block;
+}
